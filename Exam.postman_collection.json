@@ -1,0 +1,732 @@
+{
+	"info": {
+		"_postman_id": "5073cd91-dac7-43c4-8481-755610abe10b",
+		"name": "Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42465436"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Staff login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"zeonx\",\n    \"password\":\"12345678\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/staff/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"staff",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NDg4MTk4MiwiZXhwIjoxNzQ0ODkyNzgyfQ.gAHYp7h8dG5blTkJDkKefkkDnxPWfvopgnOwH7pS19A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"sotti\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/student/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"student",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "New staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NDgzNzkzOCwiZXhwIjoxNzQ0ODQ4NzM4fQ.y-YCh4V6_Jc1vN22KNmTSHJedtYIEPcQXrRSkSMkBKg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Ali\",\n    \"last_name\": \"Valiyev\",\n    \"username\": \"UzDev\",\n    \"password\":\"12345678\",\n    \"role\":\"teacher\",\n    \"position\": \"Main teacher\",\n    \"phone_number\": \"+998995371536\",\n    \"address\": \"Mars sayyorasi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/staff/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"staff",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New teacher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NDgzNzkzOCwiZXhwIjoxNzQ0ODQ4NzM4fQ.y-YCh4V6_Jc1vN22KNmTSHJedtYIEPcQXrRSkSMkBKg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"staff_id\": \"68001dd58ed1c3cfe79edb4d\",\n    \"specialization\": \"NodeJS\",\n    \"education\": \"Oliy\",\n    \"experience\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/staff/teacher/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"staff",
+								"teacher",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/staff/all",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"staff",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teachers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/teachers/all",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"teachers",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "New student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NDg4MTk4MiwiZXhwIjoxNzQ0ODkyNzgyfQ.gAHYp7h8dG5blTkJDkKefkkDnxPWfvopgnOwH7pS19A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Sotvoldi\",\n    \"last_name\": \"Soqqiyev\",\n    \"username\": \"sotti\",\n    \"password\":\"12345678\",\n    \"phone_number\":\"+998971234567\",\n    \"address\": \"Yer shari\",\n    \"birth_date\":\"2007-05-20\",\n    \"status\":\"active\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/students/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"students",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA2MDk3NiwiZXhwIjoxNzQ1MDcxNzc2fQ.bTGwNtWqMWKz8ztU4CIqHX3njHRQ3GaeuGLCALjVF6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/students/all",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"students",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "New course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NDg4MTk4MiwiZXhwIjoxNzQ0ODkyNzgyfQ.gAHYp7h8dG5blTkJDkKefkkDnxPWfvopgnOwH7pS19A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"course_name\": \"NodeJS Express\",\n    \"description\": \"NodeJs with Express\",\n    \"price\":1650000,\n    \"duration\": 5,\n    \"level\": \"Advanced\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/courses/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"courses",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/courses/all",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"courses",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Schedule",
+			"item": [
+				{
+					"name": "New Schedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"group_id\": \"68035c64aeebb370c0e797b4\",\n    \"days\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n    ],\n    \"start_time\": \"14:00\",\n    \"end_time\": \"19:00\",\n    \"room\": \"MFaktor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/schedules/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"schedules",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Schedules",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/schedules/all",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"schedules",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Group",
+			"item": [
+				{
+					"name": "New Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"group_name\": \"FN2 Fullstack\",\n    \"course_id\":\"6800e432caed029bac81880b\",\n    \"teacher_id\":\"68001fbe727b48293a604058\",\n    \"start_date\": \"2024-06-22\",\n    \"end_date\":\"2025-09-20\",\n    \"max_students\": 15,\n    \"status\": \"active\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/groups/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"groups",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA2MDk3NiwiZXhwIjoxNzQ1MDcxNzc2fQ.bTGwNtWqMWKz8ztU4CIqHX3njHRQ3GaeuGLCALjVF6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/groups/all",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"groups",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lesson",
+			"item": [
+				{
+					"name": "New Lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"group_id\": \"68035c64aeebb370c0e797b4\",\n    \"title\": \"ERP Project\",\n    \"description\": \"ERP qilamiz! 😄\",\n    \"lesson_date\": \"2025-04-19\",\n    \"start_time\": \"14:00\",\n    \"room\": \"MFaktor\",\n    \"end_time\": \"15:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/lessons/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"lessons",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/lessons/68035c64aeebb370c0e797b4/lessons",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"lessons",
+								"68035c64aeebb370c0e797b4",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "New Attendance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA1MDExOCwiZXhwIjoxNzQ1MDYwOTE4fQ.uKyJK_kVE-stFFjtVMXvi6tneqrVJArYlAoMEVZgtN4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lesson_id\": \"680370960a8898734e1eacb1\",\n    \"student_id\": \"6800cab98ed590f179b1ec3d\",\n    \"status\": \"absent\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/lessons/attendance/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"lessons",
+								"attendance",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Attendance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA2MDk3NiwiZXhwIjoxNzQ1MDcxNzc2fQ.bTGwNtWqMWKz8ztU4CIqHX3njHRQ3GaeuGLCALjVF6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/lessons/680370960a8898734e1eacb1/attendance",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"lessons",
+								"680370960a8898734e1eacb1",
+								"attendance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "New payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWRjYjlhMjRmNWU3YTEyYjIwMSIsInVzZXJuYW1lIjoiemVvbngiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc0NTA2MDk3NiwiZXhwIjoxNzQ1MDcxNzc2fQ.bTGwNtWqMWKz8ztU4CIqHX3njHRQ3GaeuGLCALjVF6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": \"6800cab98ed590f179b1ec3d\",\n    \"group_id\": \"68035c64aeebb370c0e797b4\",\n    \"amount\": 500000,\n    \"payment_method\": \"cash\",\n    \"payment_date\": \"2025-04-19\",\n    \"description\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/payments/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"payments",
+								"new"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
